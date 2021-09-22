@@ -20,6 +20,10 @@ public class TodoMain {
 			isList = false;
 			String choice = sc.next();
 			switch (choice) {
+			
+			case "help":
+				Menu.displaymenu();
+				break;
 
 			case "add":
 				TodoUtil.createItem(l);
@@ -38,17 +42,20 @@ public class TodoMain {
 				break;
 
 			case "ls_name_asc":
+				System.out.println("이름 순으로 정렬되었습니다.");
 				l.sortByName();
 				isList = true;
 				break;
 
 			case "ls_name_desc":
+				System.out.println("이름 역순으로 정렬되었습니다.");
 				l.sortByName();
 				l.reverseList();
 				isList = true;
 				break;
 				
 			case "ls_date":
+				System.out.println("시간 순으로 정렬되었습니다.");
 				l.sortByDate();
 				isList = true;
 				break;
@@ -58,7 +65,8 @@ public class TodoMain {
 				break;
 
 			default:
-				System.out.println("please enter one of the above mentioned command");
+				System.out.println("해당하는 명령어가 존재하지 않습니다. 다시 입력해주세요.");
+				System.out.println("명령어 설명을 보기 원하신다면 help를 입력해주세요.");
 				break;
 			}
 			
