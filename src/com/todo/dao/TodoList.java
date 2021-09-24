@@ -37,7 +37,9 @@ public class TodoList {
 
 	public void listAll() {
 		for (TodoItem myitem : list) {
-			System.out.println("[" + myitem.getTitle() + "] " + myitem.getDesc() + " (" + myitem.getCurrent_date() + ")");		}
+			System.out.println("[" + myitem.getCategory() + "] " + myitem.getTitle() + " - " + myitem.getDesc() 
+			+ " (" + myitem.getCurrent_date() + " ~ " + myitem.getDue_date() + ")");
+		}
 	}
 	
 	public void reverseList() {
