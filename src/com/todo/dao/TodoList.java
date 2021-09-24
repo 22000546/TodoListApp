@@ -36,6 +36,7 @@ public class TodoList {
 
 	public void listAll() {
 		for (TodoItem myitem : list) {
+			System.out.print(list.indexOf(myitem)+1 + ". ");
 			System.out.println("[" + myitem.getCategory() + "] " + myitem.getTitle() + " - " + myitem.getDesc() 
 			+ " (" + myitem.getCurrent_date() + " ~ " + myitem.getDue_date() + ")");
 		}
