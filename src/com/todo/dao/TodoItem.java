@@ -24,6 +24,15 @@ public class TodoItem {
         this.current_date = date;
     }
     
+    public TodoItem(String title, String desc, String category, String due_date) {
+    	this.title=title;
+        this.desc=desc;
+        SimpleDateFormat f = new SimpleDateFormat("yyyy/MM/dd kk:mm:ss");
+        this.current_date= f.format(new Date());
+        this.category = category;
+        this.due_date = due_date;
+    }
+    
     public TodoItem(String title, String desc, String date, String category, String due_date) {
     	this.title=title;
         this.desc=desc;
