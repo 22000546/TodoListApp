@@ -82,7 +82,7 @@ public class TodoItem {
     }
     
     public String toSaveString() {
-    	return title + "##" + desc + "##" + current_date + "\n";
+    	return category + "##" + title + "##" + desc + "##" + current_date + "##" + due_date +  "\n";
     }
     
 }
