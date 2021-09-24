@@ -59,6 +59,10 @@ public class TodoList {
 		return false;
 	}
 	
+	public int getSize() {
+		return list.size();
+	}
+	
 	public TodoItem getItem(int index) {
 		return list.get(index);
 	}
