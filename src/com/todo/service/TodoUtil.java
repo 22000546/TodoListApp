@@ -142,6 +142,24 @@ public class TodoUtil {
 			+ " (" + item.getCurrent_date() + " ~ " + item.getDue_date() + ")");
 		}
 	}
+
+	public static void listAllCategories(TodoList l) {
+		System.out.println("======== 전체 카테고리 보기 ========");
+		HashSet<String> categories = new HashSet<>();
+		for(TodoItem item : l.getList()) {
+			categories.add(item.getCategory());
+		}
+		int i = 0;
+		for(String cate : categories) {
+			System.out.print(cate);
+			if(i < categories.size() - 1) {
+				System.out.print(" / ");
+			}
+			i ++;
+		}
+		System.out.println();
+		System.out.println("총 " + categories.size() + "개의 카테고리가 등록되어 있습니다.");
+	}
 	
 	public static void saveList(TodoList l, String filename) {
 		try {
