@@ -12,12 +12,14 @@ public class Menu {
         System.out.println("5. 이름 순으로 정렬 : ls_name_asc");
         System.out.println("6. 이름 역순으로 정렬 : ls_name_desc");
         System.out.println("7. 시간 순으로 정렬 : ls_date");
-        System.out.println("8. 종료 : exit (Or press escape key)");
+        System.out.println("8. 시간 역순으로 정렬 : ls_date_desc");
+        System.out.println("9. 키워드로 검색 : find <keyword>");
+        System.out.println("10. 종료 : exit (Or press escape key)");
         
     }
     
     public static void prompt() {
-    	System.out.println("\n명령어를 입력해 주세요. > ");
+    	System.out.print("\n명령어를 입력해 주세요. > ");
     }
     
     
