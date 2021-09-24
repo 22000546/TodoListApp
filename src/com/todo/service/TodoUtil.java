@@ -117,6 +117,22 @@ public class TodoUtil {
 		System.out.println("총 " + num + "개의 항목을 찾았습니다.\n");
 		
 	}
+	
+	public static void findCategory(TodoList l, String keyword) {
+		
+		int num = 0;
+		
+		for(TodoItem item : l.getList()) {
+			if(item.findCategory(keyword)) {
+				System.out.print(l.indexOf(item)+1 + ". ");
+				System.out.println("[" + item.getCategory() + "] " + item.getTitle() + " - " + item.getDesc() 
+				+ " (" + item.getCurrent_date() + " ~ " + item.getDue_date() + ")");
+				num ++;
+			}	
+		}
+		System.out.println("총 " + num + "개의 항목을 찾았습니다.\n");
+		
+	}
 
 	public static void listAll(TodoList l) {
 		System.out.println("======== 전체 항목 보기 ========");

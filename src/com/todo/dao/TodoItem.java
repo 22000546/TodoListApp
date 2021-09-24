@@ -87,6 +87,12 @@ public class TodoItem {
     	return false;
     }
     
+    public boolean findCategory(String keyword) {
+    	if(category.contains(keyword))
+    		return true;
+    	return false;
+    }
+    
     public String toSaveString() {
     	return category + "##" + title + "##" + desc + "##" + current_date + "##" + due_date +  "\n";
     }
