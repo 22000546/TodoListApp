@@ -81,8 +81,14 @@ public class TodoItem {
     	this.due_date = due_date;
     }
     
+    public boolean findKeyword(String keyword) {
+    	if(title.contains(keyword) || desc.contains(keyword))
+    		return true;
+    	return false;
+    }
+    
     public String toSaveString() {
     	return category + "##" + title + "##" + desc + "##" + current_date + "##" + due_date +  "\n";
     }
-    
+        
 }
