@@ -101,6 +101,22 @@ public class TodoUtil {
 		System.out.println("항목이 성공적으로 수정되었습니다.");
 
 	}
+	
+	public static void findItem(TodoList l, String keyword) {
+		
+		int num = 0;
+		
+		for(TodoItem item : l.getList()) {
+			if(item.findKeyword(keyword)) {
+				System.out.print(l.indexOf(item)+1 + ". ");
+				System.out.println("[" + item.getCategory() + "] " + item.getTitle() + " - " + item.getDesc() 
+				+ " (" + item.getCurrent_date() + " ~ " + item.getDue_date() + ")");
+				num ++;
+			}	
+		}
+		System.out.println("총 " + num + "개의 항목을 찾았습니다.\n");
+		
+	}
 
 	public static void listAll(TodoList l) {
 		System.out.println("======== 전체 항목 보기 ========");
@@ -135,11 +151,13 @@ public class TodoUtil {
 			String oneline;
 			while((oneline = br.readLine()) != null) {
 				StringTokenizer st = new StringTokenizer(oneline, "##");
+				String category = st.nextToken();
 				String title = st.nextToken();
 				String desc = st.nextToken();
 				String date = st.nextToken();
+				String due_date = st.nextToken();
 				
-				TodoItem i = new TodoItem(title, desc, date);
+				TodoItem i = new TodoItem(title, desc, date, category, due_date);
 				l.addItem(i);
 				
 			}
