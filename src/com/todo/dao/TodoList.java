@@ -25,14 +25,13 @@ public class TodoList {
 		list.remove(index);
 		list.add(updated);
 	}
-
+	
 	public ArrayList<TodoItem> getList() {
 		return new ArrayList<TodoItem>(list);
 	}
 
 	public void sortByName() {
 		Collections.sort(list, new TodoSortByName());
-
 	}
 
 	public void listAll() {
