@@ -152,6 +152,7 @@ public class TodoUtil {
 		int i = 0;
 		for(String cate : categories) {
 			System.out.print(cate);
+			// Other way : hasNext()
 			if(i < categories.size() - 1) {
 				System.out.print(" / ");
 			}
